@@ -61,6 +61,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				meat: {
+					red: '#8B2635',
+					cream: '#F5E6D3',
+					brown: '#8B4513',
+					darkred: '#5C1A20',
+					lightcream: '#FAF5F0'
 				}
 			},
 			borderRadius: {
@@ -84,12 +91,43 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					from: {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					to: {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'whatsapp-pulse': {
+					'0%, 100%': {
+						transform: 'scale(1)',
+						opacity: '1'
+					},
+					'50%': {
+						transform: 'scale(1.05)',
+						opacity: '0.8'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'whatsapp-pulse': 'whatsapp-pulse 2s ease-in-out infinite'
+			},
+			animationDelay: {
+				'200': '200ms',
+				'400': '400ms',
+				'600': '600ms'
+			},
+			fontFamily: {
+				fredoka: ['Fredoka', 'sans-serif'],
+				inter: ['Inter', 'sans-serif'],
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
